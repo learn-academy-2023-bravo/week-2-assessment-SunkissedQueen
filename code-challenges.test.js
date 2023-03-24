@@ -10,16 +10,79 @@
 // Reminder: The test will call your function
 // Run the file with the following command: $ yarn jest
 
+// Template of a jest test
+  // describe("greeter", () => {
+  //   it("returns a generic greeting", () => {
+  //     expect(greeter()).toEqual("Hello, LEARN student!")
+  //   })
+  // })
+
+// Template for pseudocode
+// Function Signature
+// input: number
+// output: string indicating allowed, denied, or error
+
+// input: 39
+// output: "Cannot ride the rollercoaster"
+
+// Process
+// create a function called tallEnough that takes in a number called height
+// if height is less than 40 return "Cannot ride the rollercoaster"
+// if height is greater than or equal to 40 return "Buckle up, let's ride"
+// any other input return error
+
+// Template of function
+// const greeter = () => {
+//   return "Hello, LEARN student!"
+// }
+
 // --------------------INSTRUCTOR EXAMPLE: Create a function that takes in an array of numbers and returns an array with all the numbers multiplied by 3.
 
 // a) Create a test with expect statements for each of the variables provided.
 
-const numbersArray1 = [6, 7, 8, 9, 10]
-// Expected output: [18, 21, 24, 27, 30]
-const numbersArray2 = [24, 27, 30, 33, 36]
-// Expected output: [72, 81, 90, 99, 108]
+
+describe("tripleThat", () => {
+  it("takes in an array of numbers and returns an array with all the numbers multiplied by 3", () => {
+    const numbersArray1 = [6, 7, 8, 9, 10]
+    // Expected output: [18, 21, 24, 27, 30]
+    const numbersArray2 = [24, 27, 30, 33, 36]
+    // Expected output: [72, 81, 90, 99, 108]
+    expect(tripleThat(numbersArray1)).toEqual([18, 21, 24, 27, 30])
+    expect(tripleThat(numbersArray2)).toEqual([72, 81, 90, 99, 108])
+  })
+})
+
+// Yes, I failed.
+// FAIL  ./code-challenges.test.js
+// tripleThat
+//   ✕ takes in an array of numbers and returns an array with all the numbers multiplied by 3 (1 ms)
 
 // b) Create the function that makes the test pass.
+
+// Pseudocode
+// input: one array of numbers called array
+// output: new array of numbers with same length as the original, values are multiplied by three
+
+// input: [6, 7, 8, 9, 10]
+// output: [18, 21, 24, 27, 30]
+
+// Process
+// create a function called tripleThat
+// access each value in the array using iteration, possible methods: .forEach(), .map()
+// iteration needs to produce an array with the same length as the original array, .map()
+// return value at each index multiplied by three
+
+// Function
+const tripleThat = (array) => {
+  return array.map((value) => {
+    return value * 3
+  })
+}
+
+// Success
+// PASS  ./code-challenges.test.js
+// tripleThat
+//   ✓ takes in an array of numbers and returns an array with all the numbers multiplied by 3 (1 ms)
 
 // --------------------1) Create a function that takes a object as an argument and decides if the number inside it is evenly divisible by three or not.
 
@@ -33,6 +96,8 @@ const object3 = { number: -7 }
 // Expected output: "-7 is not divisible by three"
 
 // b) Create the function that makes the test pass.
+
+// No I am not about to finish your assessment.
 
 // --------------------2) Create a function that takes in an array of words and returns an array with all the words capitalized.
 
