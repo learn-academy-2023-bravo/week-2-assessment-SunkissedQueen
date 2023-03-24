@@ -97,6 +97,8 @@ const object3 = { number: -7 }
 
 // b) Create the function that makes the test pass.
 
+// No I am not about to finish your assessment.
+
 // --------------------2) Create a function that takes in an array of words and returns an array with all the words capitalized.
 
 // a) Create a test with expect statements for each of the variables provided.
